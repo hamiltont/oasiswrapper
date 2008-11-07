@@ -14,15 +14,38 @@ public class Department {
 		
 	}
 	
-	public ArrayList<Course> getCourses() {
+	public String getShortName()
+	{
+		return short_name_;
+	}
+	
+	public void setShortName(String name)
+	{
+		short_name_ = name;
+	}
+	
+	public String getFullName()
+	{
+		return full_name_;
+	}
+	
+	public void setFullName(String name)
+	{
+		full_name_ = name;
+	}
+	
+	public ArrayList<Course> getCourses() 
+	{
 		return null;
 	}
 	
-	public void addCourse(Course c) {
-		
+	public void addCourse(Course c) 
+	{
+		courses_.add(c);
 	}
 	
-	public void removeCourse(Course c) {
-		
+	public void removeCourse(Course c) 
+	{
+		courses_.remove(c);
 	}
 }
