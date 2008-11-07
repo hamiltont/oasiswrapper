@@ -1,39 +1,39 @@
 package cs278.oasis.test;
 
 import cs278.oasis.OASISConnection;
-import cs278.oasis.commands.OASISAddCommand;
+import cs278.oasis.commands.OASISDropCommand;
 import cs278.oasis.model.Course;
 import cs278.oasis.model.Department;
 import junit.framework.TestCase;
 
-public class OASISAddCommandTest extends TestCase {
+public class OASISDropCommandTest extends TestCase {
 
-	public void testRun() {
-		OASISAddCommand oac = new OASISAddCommand();
+	public final void testRun() {
+		OASISDropCommand odc = new OASISDropCommand();
 		OASISConnection oConn = new OASISConnection();
 		
 		Course course_ = new Course();
 		course_.setCourse_number("101");
 		Department d = new Department("","PSY");
 		course_.setParent(d);
-		oac.toAdd = course_;
+		odc.toDrop = course_;
 		
-		if (!oac.run(oConn))
-			fail("Course was not added"); 
+		if (!odc.run(oConn))
+			fail("Course was not dropped"); 
 	}
 
-	public void testUnrun() {
-		OASISAddCommand oac = new OASISAddCommand();
+	public final void testUnrun() {
+		OASISDropCommand odc = new OASISDropCommand();
 		OASISConnection oConn = new OASISConnection();
 		
 		Course course_ = new Course();
 		course_.setCourse_number("101");
 		Department d = new Department("","PSY");
 		course_.setParent(d);
-		oac.toAdd = course_;
+		odc.toDrop = course_;
 		
-		if (!oac.unrun(oConn))
-			fail("Course was not unadded"); 
+		if (!odc.run(oConn))
+			fail("Course was not undropped"); 
 	}
 
 }
