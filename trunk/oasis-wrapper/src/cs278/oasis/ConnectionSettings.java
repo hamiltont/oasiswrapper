@@ -2,7 +2,7 @@ package cs278.oasis;
 
 import java.util.HashMap;
 
- class ConnectionSettings {
+public class ConnectionSettings {
 	protected HashMap<Object, String> properties_;
 
 	public void loadFromFile(String path)
