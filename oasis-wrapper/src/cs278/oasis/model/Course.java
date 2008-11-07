@@ -10,15 +10,15 @@ import java.util.HashMap;
  *
  */
 public class Course {
-	String title_;
-	String department_;
-	String course_number_;
-	String building_;
-	Integer room_number_;
-	HashMap<String, String> schedule_;  // should probably turn this into 
+	private String title_;
+	private Department parent;
+	private String course_number_;
+	private String building_;
+	private Integer room_number_;
+	private HashMap<String, String> schedule_;  // should probably turn this into 
 									   //  <string, TimeWindow>
-	String professor_;
-	Integer credit_hours;
+	private String professor_;
+	private Integer credit_hours;
 	
 	/**
 	 * @return the title_
@@ -34,22 +34,7 @@ public class Course {
 	public void setTitle(String title_) {
 		this.title_ = title_;
 	}
-	
-	
-	/**
-	 * @return the department_
-	 */
-	public String getDepartment() {
-		return department_;
-	}
-	
-	
-	/**
-	 * @param department_ the department_ to set
-	 */
-	public void setDepartment(String department_) {
-		this.department_ = department_;
-	}
+
 	
 	
 	/**
@@ -142,8 +127,24 @@ public class Course {
 	/**
 	 * @param credit_hours_ the credit_hours_ to set
 	 */
-	public void setTitle(Integer credit_hours_) {
+	public void setCreditHours(Integer credit_hours_) {
 		this.credit_hours = credit_hours_;
+	}
+
+
+	/**
+	 * @param parent the parent to set
+	 */
+	public void setParent(Department parent) {
+		this.parent = parent;
+	}
+
+
+	/**
+	 * @return the parent
+	 */
+	public Department getParent() {
+		return parent;
 	}
 	
 }
