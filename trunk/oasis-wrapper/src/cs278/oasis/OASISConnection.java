@@ -5,7 +5,7 @@ import cs278.oasis.commands.*;
 public class OASISConnection {
 	
 	protected ConnectionSettings settings_;
-	protected boolean isConnected_;
+	private boolean isConnected_ = false;
 	
 	public OASISConnection()
 	{
@@ -35,4 +35,17 @@ public class OASISConnection {
 	{
 		command.run(this);
 	}
+
+	/**
+	 * @return the isConnected_
+	 */
+	public boolean isConnected_() {
+		return isConnected_;
+	}
+	
+	public void write(String oasiscmd)
+	{
+		
+	}
+
 }
