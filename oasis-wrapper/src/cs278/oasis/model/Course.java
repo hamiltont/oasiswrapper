@@ -10,6 +10,27 @@ import java.util.HashMap;
  *
  */
 public class Course {
+	public Course(String building_, String course_number_,
+			Integer credit_hours, Department parent, String professor_,
+			Integer room_number_, HashMap<String, String> schedule_,
+			String title_) {
+		super();
+		this.building_ = building_;
+		this.course_number_ = course_number_;
+		this.credit_hours = credit_hours;
+		this.parent = parent;
+		this.professor_ = professor_;
+		this.room_number_ = room_number_;
+		this.schedule_ = schedule_;
+		this.title_ = title_;
+	}
+
+
+	public Course() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	private String title_;
 	private Department parent;
 	private String course_number_;
