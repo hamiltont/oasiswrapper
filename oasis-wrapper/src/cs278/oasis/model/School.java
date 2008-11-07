@@ -22,4 +22,27 @@ public class School {
 	public void removeDepartment(Department d){
 		
 	}
+
+	
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+
+	/**
+	 * @return the short_name
+	 */
+	public String getShort_name() {
+		return short_name;
+	}
+
+	/**
+	 * @return the departments_
+	 */
+	public ArrayList<Department> getDepartments() {
+		return departments_;
+	}
 }
