@@ -17,7 +17,7 @@ public class Course {
 	private String building_;
 	private Integer room_number_;
 	private HashMap<String, String> schedule_;  // should probably turn this into 
-									   //  <string, TimeWindow>
+												//  <string, TimeWindow>
 	private String professor_;
 	private Integer credit_hours;
 	
