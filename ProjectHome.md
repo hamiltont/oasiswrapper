@@ -1,0 +1,3 @@
+OASIS (Online Access Student Information System) is the course registration system used at Vanderbilt and other universities. OASIS was written years ago, and is command-line based, making it difficult and non-intuitive to use.
+
+The goal of the project is to create an object-oriented wrapper of the OASIS interface that makes it clean and easy to use. It will integrate with university course catalogs in an iTunes-like UI.
